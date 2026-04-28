@@ -1,0 +1,87 @@
+[size=4][u]All Ships with Filters[/u][/size]
+
+Adds an [b]All Ships with Filters[/b] tab to the [b]Property Owned[/b] menu in the map. The tab shows all owned ships in three sections: [b]Fleets[/b], [b]Stations with Assigned Ships[/b] (subordinate ships only, without module or construction rows), and [b]Unassigned Ships[/b]. Supports multi-dimensional filtering by ship type, size, sector, dock status, default behaviour, current order, and failed orders.
+
+[size=3][u][b]Features[/b][/u][/size]
+[list]
+[*] [b]All Ships tab[/b]: A dedicated tab in the Property Owned menu lists every owned ship in three sections - Fleets, Stations with Assigned Ships, and Unassigned Ships - using the same ship rows as the vanilla view (hull bars, action buttons, sub-expansion).
+[*] [b]Stations section[/b]: Shows only the subordinate ships assigned to each station, hiding module and construction rows for a cleaner list.
+[*] [b]Multi-dimensional filtering[/b]: Add up to one filter per available dimension. Each filter row has a category dropdown and, once a category is selected, a value dropdown. Multiple filter slots appear automatically; remove a slot by setting its category back to None.
+[*] [b]Filter dimensions[/b]: [b]Type[/b] (ship purpose), [b]Size[/b] (hull class), [b]Sector[/b], [b]Docked[/b] (yes/no), [b]Default Behaviour[/b], [b]Current Order[/b], [b]Failed Orders[/b].
+[*] [b]Fleet handling[/b]: A fleet is shown whenever the fleet commander or at least one subordinate passes the active filters. Fleet unit group entries are always preserved so the expand/collapse button remains functional.
+[*] [b]Expand/collapse all[/b]: When the list contains expandable entries (fleets or stations with subordinates), a master +/- button appears in the filter header row to expand or collapse all at once.
+[*] [b]Compatible with X4 8.00 and 9.00[/b].
+[/list]
+[size=3][u][b]Requirements[/b][/u][/size]
+[list]
+[*] [b]X4: Foundations[/b]: Version [b]8.00HF4[/b] or higher and [b]UI Extensions and HUD[/b]: Version [b]v8.0.4.x[/b] or higher by [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url]:
+[list]
+[*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/552]UI Extensions and HUD[/url]
+[/list]
+[*] [b]X4: Foundations[/b]: Version [b]9.00 beta 3[/b] or higher and [b]UI Extensions and HUD[/b]: Version [b]v9.0.0.0.3[/b] or higher by [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url].
+[*] [b]Mod Support APIs[/b]: Version 1.95 or higher by [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url]:
+[list]
+[*] Available on Steam: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042901274]SirNukes Mod Support APIs[/url]
+[*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/503]Mod Support APIs[/url]
+[/list]
+[*] [b]Options Helper[/b]: Version 1.0 or higher by [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Chem O`Dun[/url]:
+[list]
+[*] Available on Steam: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3715253556]Options Helper[/url]
+[*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/2089]Options Helper[/url]
+[/list]
+[/list]
+[size=3][u][b]Installation[/b][/u][/size]
+[list]
+[*] [b]Steam Workshop[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=0]All Ships with Filters[/url]
+[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/0]All Ships with Filters[/url]
+[/list]
+[size=3][u][b]Usage[/b][/u][/size]
+
+Open the map, switch to the [b]Property Owned[/b] panel, and click the [b]All Ships with Filters[/b] tab in the tab strip.
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/all_ships.png[/img]
+
+[size=3][u][i]Filter rows[/i][/u][/size]
+
+The top of the tab contains one or more [b]filter rows[/b]. Each row has:
+[list]
+[*] A [b]category dropdown[/b] - choose the dimension to filter by (Type, Size, Sector, Docked, Default Behaviour, Current Order, Failed Orders). Setting this back to None removes only that slot; the remaining slots are preserved. Changing it to a different category removes all slots after it, since their value selections may no longer be meaningful.
+[*] A [b]value dropdown[/b] - appears once a category is chosen; select the specific value to match. Choosing None here shows all ships regardless of that dimension's value.
+[/list]
+Additional filter slots appear automatically when all existing slots have an active category. All active filters are applied simultaneously (AND logic).
+
+[size=3][u][i]Expand/collapse all[/i][/u][/size]
+
+When the ship list contains expandable entries (fleet leaders or stations with subordinates), a [b]+/-[/b] button appears in the filter header row. Clicking it expands or collapses every expandable entry at once.
+
+[size=3][u][i]Sections[/i][/u][/size]
+[list]
+[*] [b]Fleets[/b]: Fleet leaders and their subordinates. A fleet is visible if the commander or any subordinate passes the filter.
+[*] [b]Stations with Assigned Ships[/b]: Stations that have at least one assigned ship passing the filter, showing only the subordinate ships.
+[*] [b]Unassigned Ships[/b]: Ships not assigned to a fleet or station, filtered by the active filter.
+[/list]
+[size=3][u][i]Extension options[/i][/u][/size]
+
+[b]Options Menu > Extension options > All Ships with Filters[/b]:
+[list]
+[*] [b]Debug mode[/b]: Controls log verbosity. Options: None (default), Debug, Trace. Use Debug or Trace only when troubleshooting - these write to the game log on every refresh.
+[/list]
+[size=3][u][b]Credits[/b][/u][/size]
+[list]
+[*] [b]Author[/b]: Chem O`Dun, on [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Nexus Mods[/url] and [url=https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160]Steam Workshop[/url]
+[*] [i]"X4: Foundations"[/i] is a trademark of [url=https://www.egosoft.com]Egosoft[/url].
+[/list]
+[size=3][u][b]Acknowledgements[/b][/u][/size]
+[list]
+[*] [url=https://www.egosoft.com]EGOSOFT[/url] - for the X series.
+[*] [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url] - for the [b]UI Extensions and HUD[/b] that makes this extension possible.
+[*] [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url] - for the [b]Mod Support APIs[/b] that power the UI hooks and options menu.
+[/list]
+[size=3][u][b]Changelog[/b][/u][/size]
+
+[size=3][u][i][8.00.01] - 2026-04-28[/i][/u][/size]
+[list]
+[*] [b]Added[/b]
+[list]
+[*] Initial public version.
+[/list]
+[/list]
