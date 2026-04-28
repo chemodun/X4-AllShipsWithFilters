@@ -57,7 +57,7 @@
                 </run_actions>
 
                 <set_value name="$debugOptions" exact="list[
-          table[$text = {1972092422, 90001}, $value = 'none'],
+          table[$text = {1001, 34}, $value = 'none'],
           table[$text = {1972092422, 90002}, $value = 'debug'],
           table[$text = {1972092422, 90003}, $value = 'trace'],
         ]" />

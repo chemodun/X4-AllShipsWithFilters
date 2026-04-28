@@ -142,11 +142,11 @@ local cachedSizeLabels = nil
 local function sizeLabels()
   if not cachedSizeLabels then
     cachedSizeLabels = {
-      xs = ReadText(PAGE_ID, 131),
-      s  = ReadText(PAGE_ID, 132),
-      m  = ReadText(PAGE_ID, 133),
-      l  = ReadText(PAGE_ID, 134),
-      xl = ReadText(PAGE_ID, 135),
+      xs = ReadText(1001, 52),
+      s  = ReadText(1001, 51),
+      m  = ReadText(1001, 50),
+      l  = ReadText(1001, 49),
+      xl = ReadText(1001, 48),
     }
   end
   return cachedSizeLabels
@@ -162,7 +162,7 @@ local function purposeLabels()
       mine      = ReadText(20213, 500),
       salvage   = ReadText(20213, 1800),
       build     = ReadText(20213, 400),
-      neutral   = ReadText(PAGE_ID, 130),
+      neutral   = ReadText(1001, 3840),
     }
   end
   return cachedPurposeLabels
@@ -176,14 +176,14 @@ local function valueLabel(dim, value)
   elseif dim == "sector" then
     return value
   elseif dim == "docked" then
-    if value == "1" then return ReadText(PAGE_ID, 141)
-    else                 return ReadText(PAGE_ID, 142) end
+    if value == "1" then return ReadText(1001, 2617)
+    else                 return ReadText(1001, 2618) end
   elseif dim == "defaultorder" or dim == "order" then
     -- value is the order-definition name string
     return value
   elseif dim == "failedorder" then
-    if value == "1" then return ReadText(PAGE_ID, 141)  -- "Yes"
-    else                 return ReadText(PAGE_ID, 142) end -- "No"
+    if value == "1" then return ReadText(1001, 2617)  -- "Yes"
+    else                 return ReadText(1001, 2618) end -- "No"
   end
   return value
 end
@@ -192,7 +192,7 @@ local function dimLabel(dim)
   if dim == "type"         then return ReadText(1001, 6400)  end  -- "Type"
   if dim == "size"         then return ReadText(1001, 8026)  end  -- "Size"
   if dim == "sector"       then return ReadText(1001, 11284) end  -- "Sector"
-  if dim == "docked"       then return ReadText(PAGE_ID, 140) end -- "Docked"
+  if dim == "docked"       then return ReadText(1001, 3249) end -- "Docked"
   if dim == "defaultorder" then return ReadText(1001, 8320)  end  -- "Default Behaviour"
   if dim == "order"        then return ReadText(1001, 8392)  end  -- "Current Order"
   if dim == "failedorder"  then return ReadText(1001, 11621) end  -- "Failed Orders"
