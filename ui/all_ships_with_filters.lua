@@ -563,7 +563,12 @@ local function renderFilterRows(ftable, instance, infoTableData)
   end
 
   -- Header row: expand/collapse button (col 1) + "Filter by:" label (col 2), no other controls.
-  local headerRow = ftable:addRow(hasExpandable and "asf_filter_header" or false, { fixed = true })
+  local filterGroup = ftable
+  if asf.isV9 then
+    filterGroup = ftable:addRowGroup({})
+  end
+
+  local headerRow = filterGroup:addRow(hasExpandable and "asf_filter_header" or false, { fixed = true })
   if hasExpandable then
     local btn = headerRow[1]:createButton({ scaling = false })
     btn:setText(allExpanded and "-" or "+", { scaling = true, halign = "center" })
@@ -619,7 +624,7 @@ local function renderFilterRows(ftable, instance, infoTableData)
     end
 
     -- Filter row: col 1 empty, col 2 = category dropdown, col 3..totalCols-1 = value dropdown.
-    local fRow = ftable:addRow("asf_filter_" .. slotIdx, { fixed = true })
+    local fRow = filterGroup:addRow("asf_filter_" .. slotIdx, { fixed = true })
 
     -- Col 2: category dropdown.
     local catDD = fRow[2]:createDropDown(
