@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content
+    id=""
+    name="All Ships with Filters"
+    author="Chem O`Dun"
+    version="100"
+    date="2026-04-28"
+    save="false"
+    sync="false"
+    description="Adds an [b]All Ships[/b] tab to the [b]Property Owned[/b] menu in the map. The tab shows all owned ships in three sections: [b]Fleets[/b], [b]Stations with Assigned Ships[/b] (expanded to show only the subordinate ships, without module or construction rows), and [b]Unassigned Ships[/b]. Supports filtering by ship type, size, sector, dock status, default behaviour, current order, and failed orders.">
+    <text language="44" name="All Ships with Filters" description="Adds an All Ships tab to the Property Owned map menu. Shows all owned ships: fleets, ships assigned to stations, and unassigned ships. Supports multi-dimensional filtering." />
+</content>

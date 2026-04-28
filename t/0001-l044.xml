@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English -->
+<diff>
+    <add sel="/language">
+        <page id="1972092422" title="All Ships with Filters" descr="" voice="no">
+            <!-- mod identity (always first) -->
+            <t id="1">All Ships with Filters</t>
+            <t id="2">Shows all owned ships: fleets, ships assigned to stations, and unassigned ships. Supports filtering by ship type, size, sector, dock status, default behaviour, current order, and failed orders.</t>
+            <!-- primary UI labels (100+) -->
+            <t id="100">Filter by:</t>
+            <!-- section headers (110+) -->
+            <t id="110">Stations with Assigned Ships</t>
+            <!-- group labels / ship purpose "Other" (130) -->
+            <t id="130">(Purpose)Other</t>
+            <!-- size labels (131-135) -->
+            <t id="131">XS</t>
+            <t id="132">S</t>
+            <t id="133">M</t>
+            <t id="134">L</t>
+            <t id="135">XL</t>
+            <!-- filter dim label (140) -->
+            <t id="140">Docked</t>
+            <!-- docked value labels (141-142) -->
+            <t id="141">Yes</t>
+            <t id="142">No</t>
+        </page>
+    </add>
+</diff>
