@@ -82,7 +82,7 @@ When the ship list contains expandable entries (fleet leaders or stations with s
 
 ## Changelog
 
-### [8.00.01] - 2026-04-28
+### [8.00.02] - 2026-04-28
 
 - **Added**
   - Initial public version.
