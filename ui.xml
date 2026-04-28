@@ -5,6 +5,7 @@
         <dependency name="sn_mod_support_apis" />
         <dependency name="ego_detailmonitor" />
         <dependency name="kuertee_ui_extensions" />
+        <dependency name="options_helper" />
         <file name="ui/all_ships_with_filters.lua" />
     </environment>
 </addon>

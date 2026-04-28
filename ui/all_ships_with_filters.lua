@@ -113,11 +113,17 @@ local asf = {
 
 -- *** debug helpers ***
 
-local debugLevel = "debug"   -- "none" | "debug"
+local debugLevel = "none"   -- "none" | "debug" | "trace"; updated by MD config
 
 local function debug(msg)
   if debugLevel ~= "none" and type(DebugError) == "function" then
     DebugError("AllShipsWithFilters: " .. msg)
+  end
+end
+
+local function trace(msg)
+  if debugLevel == "trace" and type(DebugError) == "function" then
+    DebugError("AllShipsWithFilters [trace]: " .. msg)
   end
 end
 
@@ -813,6 +819,14 @@ local function Init()
   menuMap.registerCallback(
     "createPropertyOwned_on_createPropertySection_unassignedships",
     asf.displayTabData)
+
+  -- Load debug level from MD config (if already set in this session).
+  RegisterEvent("AllShipsWithFilters.ConfigChanged", function(_, param)
+    if param and param.debugMode then
+      debugLevel = param.debugMode
+      debug("debug mode set to: " .. debugLevel)
+    end
+  end)
 
   asf.setupTab()
 end

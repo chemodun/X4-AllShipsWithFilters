@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="All_Ships_With_Filters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+    <cues>
+
+        <cue name="Init" version="1">
+            <actions>
+                <include_actions ref="DefaultConfig" />
+                <remove_value name="$config" />
+            </actions>
+        </cue>
+
+        <!-- Reads (or initialises) mod config from player.entity.$allShipsWithFiltersConfig.
+         Leaves a local $config reference; caller must <remove_value name="$config" />. -->
+        <library name="DefaultConfig" purpose="include_actions" version="1">
+            <actions>
+                <do_if value="@player.entity.$allShipsWithFiltersConfig == null">
+                    <set_value name="player.entity.$allShipsWithFiltersConfig" exact="table[
+            $debugMode = 'none',
+          ]" />
+                </do_if>
+                <set_value name="$config" exact="player.entity.$allShipsWithFiltersConfig" />
+                <!-- forward-compat: fill keys added in later versions -->
+                <do_if value="$config.$debugMode? == false">
+                    <set_value name="$config.$debugMode" exact="'none'" />
+                </do_if>
+            </actions>
+        </library>
+
+        <!-- *** Options menu *** -->
+
+        <cue name="Register_Menu" instantiate="true" version="1">
+            <conditions>
+                <event_cue_signalled cue="md.Simple_Menu_API.Reloaded" />
+            </conditions>
+            <actions>
+                <signal_cue_instantly cue="md.Simple_Menu_API.Register_Options_Menu"
+                    param="table[
+            $id      = 'all_ships_with_filters_options',
+            $columns = 12,
+            $title   = {1972092422, 1},
+            $onOpen  = All_Ships_With_Filters_Options_Menu,
+          ]" />
+            </actions>
+        </cue>
+
+        <cue name="All_Ships_With_Filters_Options_Menu" instantiate="true" version="1">
+            <conditions>
+                <event_cue_signalled />
+            </conditions>
+            <actions>
+                <include_actions ref="DefaultConfig" />
+
+                <!-- Section: Debug -->
+                <run_actions ref="md.Options_Helper.Add_Title_Row">
+                    <param name="title" value="{1972092422, 90000}" />
+                    <param name="columns" value="12" />
+                </run_actions>
+
+                <set_value name="$debugOptions" exact="list[
+          table[$text = {1972092422, 90001}, $value = 'none'],
+          table[$text = {1972092422, 90002}, $value = 'debug'],
+          table[$text = {1972092422, 90003}, $value = 'trace'],
+        ]" />
+                <set_value name="$currentIndex" exact="1" />
+                <do_if value="$config.$debugMode == 'debug'">
+                    <set_value name="$currentIndex" exact="2" />
+                </do_if>
+                <do_elseif value="$config.$debugMode == 'trace'">
+                    <set_value name="$currentIndex" exact="3" />
+                </do_elseif>
+                <run_actions ref="md.Options_Helper.Add_Dropdown">
+                    <param name="id" value="'debugMode'" />
+                    <param name="options" value="$debugOptions" />
+                    <param name="currentIndex" value="$currentIndex" />
+                    <param name="col" value="1" />
+                    <param name="textColSpan" value="7" />
+                    <param name="text" value="{1972092422, 90004}" />
+                    <param name="dropdownColSpan" value="5" />
+                    <param name="handle" value="Handle_Dropdown_Changed" />
+                </run_actions>
+                <remove_value name="$debugOptions" />
+                <remove_value name="$currentIndex" />
+                <remove_value name="$config" />
+            </actions>
+        </cue>
+
+        <cue name="Handle_Dropdown_Changed" instantiate="true" version="1">
+            <conditions>
+                <event_cue_signalled />
+            </conditions>
+            <actions>
+                <include_actions ref="DefaultConfig" />
+                <set_value name="$resultTable" exact="$config" />
+                <include_actions ref="md.Options_Helper.Process_Dropdown_Changed" />
+                <raise_lua_event name="'AllShipsWithFilters.ConfigChanged'" param="table[$debugMode = $config.$debugMode]" />
+                <remove_value name="$config" />
+                <remove_value name="$resultTable" />
+            </actions>
+        </cue>
+
+    </cues>
+</mdscript>

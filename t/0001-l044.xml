@@ -23,6 +23,12 @@
             <!-- docked value labels (141-142) -->
             <t id="141">Yes</t>
             <t id="142">No</t>
+            <!-- settings / options labels (90000+) -->
+            <t id="90000">Debug</t>
+            <t id="90001">None</t>
+            <t id="90002">Debug</t>
+            <t id="90003">Trace</t>
+            <t id="90004">Debug mode</t>
         </page>
     </add>
 </diff>
