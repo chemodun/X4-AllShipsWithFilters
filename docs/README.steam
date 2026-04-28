@@ -33,7 +33,7 @@ Adds an [b]All Ships with Filters[/b] tab to the [b]Property Owned[/b] menu in t
 [h2][b]Installation[/b][/h2]
 [list]
 [*] [b]Steam Workshop[/b]: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=0]All Ships with Filters[/url]
-[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/0]All Ships with Filters[/url]
+[*] [b]Nexus Mods[/b]: [url=https://www.nexusmods.com/x4foundations/mods/2094]All Ships with Filters[/url]
 [/list]
 [h2][b]Usage[/b][/h2]
 
@@ -49,22 +49,32 @@ The top of the tab contains one or more [b]filter rows[/b]. Each row has:
 [/list]
 Additional filter slots appear automatically when all existing slots have an active category. All active filters are applied simultaneously (AND logic).
 
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/failed_orders.png[/img]
+
 [h2]Expand/collapse all[/h2]
 
 When the ship list contains expandable entries (fleet leaders or stations with subordinates), a [b]+/-[/b] button appears in the filter header row. Clicking it expands or collapses every expandable entry at once.
 
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/failed_orders_size_m_all_expanded.png[/img]
+
 [h2]Sections[/h2]
 [list]
-[*] [b]Fleets[/b]: Fleet leaders and their subordinates. A fleet is visible if the commander or any subordinate passes the filter.
-[*] [b]Stations with Assigned Ships[/b]: Stations that have at least one assigned ship passing the filter, showing only the subordinate ships.
-[*] [b]Unassigned Ships[/b]: Ships not assigned to a fleet or station, filtered by the active filter.
+[*] [b]Fleets[/b]: Fleet leaders and their subordinates. A fleet is visible if the commander or any subordinate passes the active filter. When a fleet is shown but only some subordinates match, the subordinate list is pre-filtered so only matching ships appear inside the expanded fleet. The fleet leader row itself is always shown even if the commander does not match, as long as at least one subordinate does.
+[*] [b]Stations with Assigned Ships[/b]: Only stations that have at least one assigned ship passing the filter are shown. The subordinate ship list inside each station is pre-filtered to matching ships only; module and construction rows are never shown.
+[*] [b]Unassigned Ships[/b]: Ships not assigned to a fleet or station that pass the active filter.
 [/list]
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/size_s_fight_escort_heretics_end.png[/img]
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/size_m_fight_escort_heretics_end.png[/img]
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/docked.png[/img]
+
 [h2]Extension options[/h2]
 
 [b]Options Menu > Extension options > All Ships with Filters[/b]:
 [list]
 [*] [b]Debug mode[/b]: Controls log verbosity. Options: None (default), Debug, Trace. Use Debug or Trace only when troubleshooting - these write to the game log on every refresh.
 [/list]
+[img]https://raw.githubusercontent.com/chemodun/X4-AllShipsWithFilters/refs/heads/main/docs/images/extension_options.png[/img]
+
 [h2][b]Credits[/b][/h2]
 [list]
 [*] [b]Author[/b]: Chem O`Dun, on [url=https://next.nexusmods.com/profile/ChemODun/mods?gameId=2659]Nexus Mods[/url] and [url=https://steamcommunity.com/id/chemodun/myworkshopfiles/?appid=392160]Steam Workshop[/url]
