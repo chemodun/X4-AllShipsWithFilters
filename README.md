@@ -26,7 +26,7 @@ Adds an **All Ships with Filters** tab to the **Property Owned** menu in the map
 
 ## Installation
 
-- **Steam Workshop**: [All Ships with Filters](https://steamcommunity.com/sharedfiles/filedetails/?id=0)
+- **Steam Workshop**: [All Ships with Filters](https://steamcommunity.com/sharedfiles/filedetails/?id=3715969856)
 - **Nexus Mods**: [All Ships with Filters](https://www.nexusmods.com/x4foundations/mods/2094)
 
 ## Usage
