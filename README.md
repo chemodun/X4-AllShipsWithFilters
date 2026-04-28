@@ -27,7 +27,7 @@ Adds an **All Ships with Filters** tab to the **Property Owned** menu in the map
 ## Installation
 
 - **Steam Workshop**: [All Ships with Filters](https://steamcommunity.com/sharedfiles/filedetails/?id=0)
-- **Nexus Mods**: [All Ships with Filters](https://www.nexusmods.com/x4foundations/mods/0)
+- **Nexus Mods**: [All Ships with Filters](https://www.nexusmods.com/x4foundations/mods/2094)
 
 ## Usage
 
@@ -43,21 +43,31 @@ The top of the tab contains one or more **filter rows**. Each row has:
 
 Additional filter slots appear automatically when all existing slots have an active category. All active filters are applied simultaneously (AND logic).
 
+![Filter by: Failed orders](docs/images/failed_orders.png)
+
 ### Expand/collapse all
 
 When the ship list contains expandable entries (fleet leaders or stations with subordinates), a **+/-** button appears in the filter header row. Clicking it expands or collapses every expandable entry at once.
 
+![Filter by: Failed orders and Size M. All expanded](docs/images/failed_orders_size_m_all_expanded.png)
+
 ### Sections
 
-- **Fleets**: Fleet leaders and their subordinates. A fleet is visible if the commander or any subordinate passes the filter.
-- **Stations with Assigned Ships**: Stations that have at least one assigned ship passing the filter, showing only the subordinate ships.
-- **Unassigned Ships**: Ships not assigned to a fleet or station, filtered by the active filter.
+- **Fleets**: Fleet leaders and their subordinates. A fleet is visible if the commander or any subordinate passes the active filter. When a fleet is shown but only some subordinates match, the subordinate list is pre-filtered so only matching ships appear inside the expanded fleet. The fleet leader row itself is always shown even if the commander does not match, as long as at least one subordinate does.
+- **Stations with Assigned Ships**: Only stations that have at least one assigned ship passing the filter are shown. The subordinate ship list inside each station is pre-filtered to matching ships only; module and construction rows are never shown.
+- **Unassigned Ships**: Ships not assigned to a fleet or station that pass the active filter.
+
+![Filter by: Size S, Fight, Escort, Heretic's End](docs/images/size_s_fight_escort_heretics_end.png)
+![Filter by: Size M, Fight, Escort, Heretic's End](docs/images/size_m_fight_escort_heretics_end.png)
+![Filter by: Docked](docs/images/docked.png)
 
 ### Extension options
 
 **Options Menu > Extension options > All Ships with Filters**:
 
 - **Debug mode**: Controls log verbosity. Options: None (default), Debug, Trace. Use Debug or Trace only when troubleshooting - these write to the game log on every refresh.
+
+![Extension options](docs/images/extension_options.png)
 
 ## Credits
 
