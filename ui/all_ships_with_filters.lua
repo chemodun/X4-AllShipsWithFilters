@@ -685,6 +685,9 @@ local function renderFilterRows(ftable, instance, infoTableData)
       usedDims[slot.dim] = true
     end
   end
+
+  -- 1 header row + one row per filter slot.
+  return 1 + slotCount
 end
 
 -- *** display callback ***
@@ -700,7 +703,7 @@ function asf.displayTabData(numDisplayed, instance, ftable, infoTableData)
   local noneText  = "-- " .. ReadText(1001, 34) .. " --"
 
   -- ── Filter rows (fixed, at top) ──────────────────────────────────────────
-  renderFilterRows(ftable, instance, infoTableData)
+  numDisplayed = numDisplayed + renderFilterRows(ftable, instance, infoTableData)
 
   -- ── Section 1: Fleets ────────────────────────────────────────────────────
   -- A fleet is shown when the commander passes the filter, or when at least
