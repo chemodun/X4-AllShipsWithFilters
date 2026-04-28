@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- English -->
+<diff>
+    <add sel="/language">
+        <page id="1972092422" title="All Ships with Filters" descr="" voice="no">
+            <!-- mod identity (always first) -->
+            <t id="1">All Ships with Filters</t>
+            <t id="2">Shows all owned ships: fleets, ships assigned to stations, and unassigned ships. Supports filtering by ship type, size, sector, dock status, default behaviour, current order, and failed orders.</t>
+            <!-- primary UI labels (100+) -->
+            <t id="100">Filter by:</t>
+            <!-- section headers (110+) -->
+            <t id="110">Stations with Assigned Ships</t>
+            <!-- settings / options labels (90000+) -->
+            <t id="90000">Debug</t>
+            <t id="90002">Debug</t>
+            <t id="90003">Trace</t>
+            <t id="90004">Debug mode</t>
+        </page>
+    </add>
+</diff>

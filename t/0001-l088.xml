@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Chinese Traditional -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="帶篩選器的所有飛船" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">帶篩選器的所有飛船</t>
+      <t id="2">顯示所有擁有的飛船：艦隊、分配到空間站的飛船和未分配的飛船。支援按飛船類型、大小、星區、停靠狀態、預設行為、當前命令和失敗命令進行篩選。</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">篩選依據：</t>
+      <!-- section headers (110+) -->
+      <t id="110">有分配飛船的空間站</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">調試</t>
+      <t id="90002">調試</t>
+      <t id="90003">追蹤</t>
+      <t id="90004">調試模式</t>
+    </page>
+  </add>
+</diff>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- French -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="Tous les vaisseaux avec filtres" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">Tous les vaisseaux avec filtres</t>
+      <t id="2">Affiche tous les vaisseaux possédés : flottes, vaisseaux affectés aux stations et vaisseaux non affectés. Prend en charge le filtrage par type, taille, secteur, état d'amarrage, comportement par défaut, ordre actuel et ordres échoués.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">Filtrer par :</t>
+      <!-- section headers (110+) -->
+      <t id="110">Stations avec vaisseaux affectés</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">Débogage</t>
+      <t id="90002">Débogage</t>
+      <t id="90003">Trace</t>
+      <t id="90004">Mode de débogage</t>
+    </page>
+  </add>
+</diff>

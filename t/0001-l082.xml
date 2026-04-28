@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Korean -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="필터가 있는 모든 함선" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">필터가 있는 모든 함선</t>
+      <t id="2">소유한 모든 함선을 표시합니다: 함대, 정거장에 배치된 함선, 미배치 함선. 함선 유형, 크기, 구역, 도킹 상태, 기본 행동, 현재 명령, 실패한 명령으로 필터링할 수 있습니다.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">필터 기준:</t>
+      <!-- section headers (110+) -->
+      <t id="110">배치된 함선이 있는 정거장</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">디버그</t>
+      <t id="90002">디버그</t>
+      <t id="90003">추적</t>
+      <t id="90004">디버그 모드</t>
+    </page>
+  </add>
+</diff>

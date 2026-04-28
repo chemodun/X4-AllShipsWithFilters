@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Italian -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="Tutte le navi con filtri" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">Tutte le navi con filtri</t>
+      <t id="2">Mostra tutte le navi possedute: flotte, navi assegnate alle stazioni e navi non assegnate. Supporta il filtraggio per tipo, dimensione, settore, stato di attracco, comportamento predefinito, ordine corrente e ordini falliti.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">Filtra per:</t>
+      <!-- section headers (110+) -->
+      <t id="110">Stazioni con navi assegnate</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">Debug</t>
+      <t id="90002">Debug</t>
+      <t id="90003">Traccia</t>
+      <t id="90004">Modalità debug</t>
+    </page>
+  </add>
+</diff>

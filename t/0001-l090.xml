@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Turkish -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="Filtreli Tüm Gemiler" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">Filtreli Tüm Gemiler</t>
+      <t id="2">Sahip olunan tüm gemileri gösterir: filolar, istasyonlara atanmış gemiler ve atanmamış gemiler. Gemi türü, boyutu, sektör, yanaşma durumu, varsayılan davranış, mevcut emir ve başarısız emirlere göre filtrelemeyi destekler.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">Filtrele:</t>
+      <!-- section headers (110+) -->
+      <t id="110">Atanmış gemileri olan istasyonlar</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">Hata ayıklama</t>
+      <t id="90002">Hata ayıklama</t>
+      <t id="90003">İzleme</t>
+      <t id="90004">Hata ayıklama modu</t>
+    </page>
+  </add>
+</diff>

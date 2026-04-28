@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Japanese -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="フィルター付き全艦船" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">フィルター付き全艦船</t>
+      <t id="2">所有するすべての艦船を表示します：艦隊、ステーションに配属された艦船、未配属の艦船。艦船タイプ、サイズ、セクター、ドック状態、デフォルト動作、現在の命令、失敗した命令によるフィルタリングをサポートします。</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">フィルター：</t>
+      <!-- section headers (110+) -->
+      <t id="110">配属艦船のあるステーション</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">デバッグ</t>
+      <t id="90002">デバッグ</t>
+      <t id="90003">トレース</t>
+      <t id="90004">デバッグモード</t>
+    </page>
+  </add>
+</diff>

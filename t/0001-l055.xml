@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Portuguese -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="Todas as naves com filtros" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">Todas as naves com filtros</t>
+      <t id="2">Mostra todas as naves próprias: frotas, naves atribuídas a estações e naves não atribuídas. Suporta filtragem por tipo, tamanho, setor, estado de atracagem, comportamento padrão, ordem atual e ordens falhadas.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">Filtrar por:</t>
+      <!-- section headers (110+) -->
+      <t id="110">Estações com naves atribuídas</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">Depuração</t>
+      <t id="90002">Depuração</t>
+      <t id="90003">Rastreamento</t>
+      <t id="90004">Modo de depuração</t>
+    </page>
+  </add>
+</diff>

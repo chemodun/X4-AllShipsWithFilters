@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Czech -->
+<diff>
+  <add sel="/language">
+    <page id="1972092422" title="Všechny lodě s filtry" descr="" voice="no">
+      <!-- mod identity (always first) -->
+      <t id="1">Všechny lodě s filtry</t>
+      <t id="2">Zobrazuje všechny vlastněné lodě: flotily, lodě přiřazené ke stanicím a nepřiřazené lodě. Podporuje filtrování podle typu, velikosti, sektoru, stavu dokování, výchozího chování, aktuálního příkazu a neúspěšných příkazů.</t>
+      <!-- primary UI labels (100+) -->
+      <t id="100">Filtrovat podle:</t>
+      <!-- section headers (110+) -->
+      <t id="110">Stanice s přiřazenými loděmi</t>
+      <!-- settings / options labels (90000+) -->
+      <t id="90000">Ladění</t>
+      <t id="90002">Ladění</t>
+      <t id="90003">Trasování</t>
+      <t id="90004">Režim ladění</t>
+    </page>
+  </add>
+</diff>
