@@ -692,15 +692,56 @@ function asf.displayTabData(numDisplayed, instance, ftable, infoTableData)
   renderFilterRows(ftable, instance, infoTableData)
 
   -- ── Section 1: Fleets ────────────────────────────────────────────────────
-  -- Only filter which fleet leaders appear; subordinate lists are left intact
-  -- so the expand/collapse button is always shown for fleet commanders.
-  local filteredFleets = filterShips(infoTableData.fleetLeaderShips)
+  -- A fleet is shown when the commander passes the filter, or when at least
+  -- one subordinate passes the filter (or both).
+  -- Fleet unit group entries (no .component) are always passed through so
+  -- the expand/collapse button is preserved.
+  -- hasRendered controls the expand button; set it to reflect filtered count.
+  local filteredFleets = {}
+  local savedFleetSubs = {}
+  if hasActiveFilter() then
+    for _, leaderId in ipairs(infoTableData.fleetLeaderShips) do
+      local key = tostring(leaderId)
+      local subs = infoTableData.subordinates[key]
+      local commanderPasses = shipPassesFilter(leaderId)
+      local filtered = {}
+      if subs then
+        for _, sub in ipairs(subs) do
+          if sub.fleetunit then
+            table.insert(filtered, sub)
+          elseif sub.component and shipPassesFilter(sub.component) then
+            table.insert(filtered, sub)
+          end
+        end
+      end
+      -- Include this fleet if commander or any sub (with .component) passes.
+      local subPasses = false
+      for _, sub in ipairs(filtered) do
+        if sub.component then subPasses = true; break end
+      end
+      if commanderPasses or subPasses then
+        table.insert(filteredFleets, leaderId)
+        if subs then
+          savedFleetSubs[key] = subs
+          filtered.hasRendered = #filtered > 0
+          infoTableData.subordinates[key] = filtered
+        end
+      end
+    end
+  else
+    filteredFleets = infoTableData.fleetLeaderShips
+  end
 
   numDisplayed = menu.createPropertySection(
     instance, "asf_fleets", ftable,
     ReadText(1001, 8326),
     filteredFleets,
     noneText, nil, numDisplayed, nil, menu.propertySorterType)
+
+  -- Restore fleet leader subordinate lists.
+  for key, orig in pairs(savedFleetSubs) do
+    infoTableData.subordinates[key] = orig
+  end
 
   -- ── Section 2: Stations with assigned ships ───────────────────────────────
   local stationHeaderRow = ftable:addRow(false, { bgColor = Color["row_background_blue"] })
