@@ -85,7 +85,7 @@ When the ship list contains expandable entries (fleet leaders or stations with s
 ### [8.00.03] - 2026-06-18
 
 - **Changed**
-  - Enabling only for game version 9.0 and above on Steam
+  - On Steam: restricted to game version 9.0 or higher.
 
 ### [8.00.02] - 2026-04-28
 
