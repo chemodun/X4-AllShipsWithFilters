@@ -18,7 +18,7 @@ Adds an [b]All Ships with Filters[/b] tab to the [b]Property Owned[/b] menu in t
 [list]
 [*] Available on Nexus Mods: [url=https://www.nexusmods.com/x4foundations/mods/552]UI Extensions and HUD[/url]
 [/list]
-[*] [b]X4: Foundations[/b]: Version [b]9.00 beta 3[/b] or higher and [b]UI Extensions and HUD[/b]: Version [b]v9.0.0.0.3[/b] or higher by [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url].
+[*] [b]X4: Foundations[/b]: Version [b]9.00[/b] or higher and [b]UI Extensions and HUD[/b]: Version [b]v9.0.0.4[/b] or higher by [url=https://next.nexusmods.com/profile/kuertee?gameId=2659]kuertee[/url].
 [*] [b]Mod Support APIs[/b]: Version 1.95 or higher by [url=https://next.nexusmods.com/profile/sirnukes?gameId=2659]SirNukes[/url]:
 [list]
 [*] Available on Steam: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2042901274]SirNukes Mod Support APIs[/url]
@@ -88,6 +88,13 @@ When the ship list contains expandable entries (fleet leaders or stations with s
 [/list]
 [size=130][u]Changelog[/u][/size]
 
+[size=125][u][8.00.03] - 2026-06-18[/u][/size]
+[list]
+[*] [b]Changed[/b]
+[list]
+[*] Enabling only for game version 9.0 and above on Steam
+[/list]
+[/list]
 [size=125][u][8.00.02] - 2026-04-28[/u][/size]
 [list]
 [*] [b]Added[/b]
